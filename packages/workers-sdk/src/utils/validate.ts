@@ -1,9 +1,9 @@
 import type { ZodSchema, infer as ZodInfer } from 'zod'
 import type { RPCError } from '../types'
 
-export const validateRPCInput = <S extends ZodSchema>(
-  params: ZodInfer<S>,
-  schema: S,
+export const validateRPCInput = (
+  params: ZodInfer<ZodSchema>,
+  schema: ZodSchema,
 ): RPCError | null => {
   const result = schema.safeParse(params)
 
