@@ -1,8 +1,7 @@
-import type { ZodSchema } from 'zod'
 import type z from 'zod'
 import type { RPCError } from '../types'
 
-export const validateRPCInput = <S extends ZodSchema>(
+export const validateRPCInput = <S extends z.Schema>(
   params: z.infer<S>,
   schema: S,
 ): RPCError | null => {
