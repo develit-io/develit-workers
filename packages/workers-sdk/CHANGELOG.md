@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.1.2
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.1.1...v1.1.2)
+
+### 🩹 Fixes
+
+- **validate:** Fix validation utils conflict with keyword ([7bac3c6](https://github.com/develit-io/develit-workers/commit/7bac3c6))
+- **validate:** Fix validation util typing ([4735f75](https://github.com/develit-io/develit-workers/commit/4735f75))
+
+### 🏡 Chore
+
+- **release:** Update release script ([af15751](https://github.com/develit-io/develit-workers/commit/af15751))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](http://github.com/kleinpetr))
+- Daniel Klein <daniel@develit.io>
+
 ## v1.1.1
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.1.0...v1.1.1)
