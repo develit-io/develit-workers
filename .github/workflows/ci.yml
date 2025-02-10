@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  codechecks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Lint code
+        run: pnpm run lint
+
+      - name: Typecheck code
+        run: pnpm run typecheck
+# TODO: enable test in CI once ready
+#      - name: Run unit tests
+#        run: pnpm run test:unit:all

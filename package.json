@@ -1,0 +1,27 @@
+{
+  "name": "@develit-io/workers",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@10.1.0+sha512.c89847b0667ddab50396bbbd008a2a43cf3b581efd59cf5d9aa8923ea1fb4b8106c041d540d08acb095037594d73ebc51e1ec89ee40c88b30b8a66c0fae0ac1b",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "pnpm -r typecheck",
+    "postinstall": "simple-git-hooks && pnpm lint:fix"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@nuxt/eslint-config": "^1.0.1",
+    "eslint": "^9.20.0",
+    "lint-staged": "^15.4.3",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit $1",
+    "pre-commit": "npx lint-staged"
+  }
+}

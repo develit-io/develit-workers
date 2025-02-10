@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.dll
+
+# WebStorm
+.idea
+
+# Environment
+.env
+
+# NPM
+node_modules
+
+# Nitro
+.cache
+.data
+.nitro
+.output
+dist
+
+# Wrangler
+.wrangler
+
+# Vitest
+coverage
+
+# OpenTofu
+.terraform/
+terraform.tfstate*

@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": ["ESNext"],
+		"esModuleInterop": true,
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"types": [
+			"node",
+			"@cloudflare/workers-types/experimental",
+		],
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"checkJs": false,
+		"noEmit": true,
+		"isolatedModules": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"strict": true,
+	},
+}
+
