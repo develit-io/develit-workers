@@ -1,5 +1,5 @@
-import type { RPCError } from '@develit-io/workers-sdk//@types'
-import { createRPCError } from '@develit-io/workers-sdk//@utils'
+import type { RPCError } from '../types'
+import { createRPCError } from '../utils'
 
 type Result<T> = [data: T | null, error: RPCError | null]
 

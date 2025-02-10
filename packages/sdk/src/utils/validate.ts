@@ -1,5 +1,5 @@
 import type { ZodSchema, infer as ZodInfer } from 'zod'
-import type { RPCError } from '@develit-io/workers-sdk/@types'
+import type { RPCError } from '../types'
 
 export const validateRPCInput = <S extends ZodSchema>(
   params: ZodInfer<S>,

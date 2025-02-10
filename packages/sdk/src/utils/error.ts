@@ -1,4 +1,4 @@
-import type { RPCError, RPCErrorResponseStatus } from '@develit-io/workers-sdk/@types'
+import type { RPCError, RPCErrorResponseStatus } from '../types'
 
 export const createRPCError = (error: unknown, details?: { status?: RPCErrorResponseStatus, code?: string, message?: string }): RPCError => {
   return {
