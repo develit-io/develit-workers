@@ -1,5 +1,3 @@
 packages:
   - services/**/
   - packages/**/
-catalog:
-  nitro-cloudflare-dev: "^0.2.1"

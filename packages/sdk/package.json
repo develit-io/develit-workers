@@ -5,6 +5,12 @@
   "author": "Develit.io",
   "license": "ISC",
   "types": "./types.d.ts",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "pnpm -r typecheck",
+    "postinstall": "simple-git-hooks && pnpm lint:fix"
+  },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250204.0",
     "@types/node": "20.8.3",
