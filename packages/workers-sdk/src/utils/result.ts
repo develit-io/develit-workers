@@ -1,5 +1,5 @@
 import type { RPCError } from '../types'
-import { createRPCError } from '../utils'
+import { createRPCError } from '.'
 
 type Result<T> = [data: T | null, error: RPCError | null]
 

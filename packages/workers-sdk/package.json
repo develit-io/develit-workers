@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "pnpm -r typecheck",
-    "postinstall": "simple-git-hooks && pnpm lint:fix"
+    "postinstall": "simple-git-hooks && pnpm lint:fix",
+    "prepack": "unbuild"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250204.0",
