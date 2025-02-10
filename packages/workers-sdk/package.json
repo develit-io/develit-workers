@@ -1,17 +1,28 @@
 {
   "name": "@develit-io/workers-sdk",
   "version": "1.0.0",
-  "description": "",
+  "description": "Develit Workers SDK Framework",
   "author": "Develit.io",
   "license": "ISC",
-  "types": "./@types/index.ts",
+  "type": "module",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "typecheck": "pnpm -r typecheck",
-    "postinstall": "simple-git-hooks && pnpm lint:fix",
-    "prepack": "unbuild"
+    "build": "unbuild",
+    "prepack": "unbuild",
+    "changelogen": "npx changelogen@latest --bump",
+    "release": "pnpm build && npx changelogen@latest --release --push --publish"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250204.0",
     "@types/node": "20.8.3",
@@ -21,6 +32,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1"
   }
 }
