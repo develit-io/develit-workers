@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.1.0...v1.1.1)
+
+### 💅 Refactors
+
+- **validate:** Remove unnecessary generic ([374aff2](https://github.com/develit-io/develit-workers/commit/374aff2))
+- **response:** Move RPCResponse to Utils instead of Types ([2a2bc8b](https://github.com/develit-io/develit-workers/commit/2a2bc8b))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+
 ## v1.1.0
 
 
