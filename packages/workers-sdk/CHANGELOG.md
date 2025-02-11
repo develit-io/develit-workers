@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.3
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.1.2...v1.1.3)
+
+### 💅 Refactors
+
+- **result:** Be able to throw custom rpc error inside promise ([d29d72b](https://github.com/develit-io/develit-workers/commit/d29d72b))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+
 ## v1.1.2
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.1.1...v1.1.2)
