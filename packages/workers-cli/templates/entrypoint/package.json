@@ -13,6 +13,11 @@
     "db:migrate": "npx wrangler d1 migrations apply organization_d1"
   },
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.6.12"
+    "@cloudflare/vitest-pool-workers": "^0.6.13",
+    "@types/node":  "20.8.3",
+    "drizzle-orm": "^0.39.3",
+    "drizzle-kit": "^0.30.4",
+    "@cloudflare/workers-types": "^4.20250204.0",
+    "zod": "^3.24.2"
   }
 }
