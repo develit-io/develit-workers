@@ -1,0 +1,25 @@
+{
+  "name": "@develit-io/workers-cli",
+  "version": "1.0.0",
+  "description": "Develit Workers CLI Tool",
+  "author": "Develit.io",
+  "license": "ISC",
+  "type": "module",
+  "bin": {
+    "create-sw": "dist/index.js"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "prepack": "unbuild",
+    "changelogen": "npx changelogen@latest --bump",
+    "release": "pnpm build && npx changelogen@latest --release --push --publish"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.0",
+    "@types/node": "20.8.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1"
+  }
+}

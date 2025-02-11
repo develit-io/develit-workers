@@ -28,7 +28,7 @@
     "@types/node": "20.8.3",
     "consola": "^3.4.0",
     "drizzle-kit": "^0.30.4",
-    "drizzle-orm": "^0.39.2",
+    "drizzle-orm": "^0.39.3",
     "zod": "^3.24.1"
   },
   "devDependencies": {

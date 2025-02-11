@@ -1,0 +1,18 @@
+{
+  "name": "@services/template",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "npx wrangler deploy",
+    "dev": "npx wrangler dev",
+    "cf:typegen": "npx wrangler types --env-interface OrganizationEnv",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "npx drizzle-kit generate",
+    "db:migrate": "npx wrangler d1 migrations apply organization_d1"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.6.12"
+  }
+}
