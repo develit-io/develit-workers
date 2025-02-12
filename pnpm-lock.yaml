@@ -36,6 +36,9 @@ importers:
         specifier: 20.8.3
         version: 20.8.3
     devDependencies:
+      citty:
+        specifier: ^0.1.6
+        version: 0.1.6
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
