@@ -1,5 +1,10 @@
-export type RPCResponseStatus = 200 | 400 | 401 | 403 | 404 | 409 | 422 | 500
-export type RPCErrorResponseStatus = Exclude<RPCResponseStatus, 200>
+import type { StatusCodes as RPCResponseStatus } from 'http-status-codes'
+import { ReasonPhrases as RPCResponsePhrase } from 'http-status-codes'
+
+export { RPCResponseStatus }
+export { RPCResponsePhrase }
+
+export type RPCErrorResponseStatus = Exclude<RPCResponseStatus, 200 | 201 | 202 | 203 | 204 | 205 | 206 | 207>
 
 export type RPCError = {
   status: RPCErrorResponseStatus
@@ -9,6 +14,8 @@ export type RPCError = {
 
 export type IRPCResponse<T> = {
   status: RPCResponseStatus
+  message: string
   data: T | null
   error: RPCError | null
+  phrase?: RPCResponsePhrase
 }
