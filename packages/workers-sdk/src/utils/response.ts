@@ -10,11 +10,12 @@ export const RPCResponse = {
    *
    * @template T - The type of the response data.
    * @param data - The data to return in the response.
+   * @param message - Response message
    * @param status - (Optional) HTTP status code, defaults to 200.
    * @returns An `IRPCResponse<T>` with the provided data and no error.
    */
-  ok<T>(data: T, status: RPCResponseStatus = 200): IRPCResponse<T> {
-    return { status, data, error: null }
+  ok<T>(data: T, message: string, status: RPCResponseStatus = 200): IRPCResponse<T> {
+    return { status, data, error: null, message }
   },
 
   /**
@@ -28,7 +29,7 @@ export const RPCResponse = {
    */
   serviceError<T>(error: RPCError): IRPCResponse<T> {
     consola.error(error.message)
-    return { status: error.status, data: null as T, error }
+    return { status: error.status, message: error.message, data: null as T, error }
   },
 
   /**
