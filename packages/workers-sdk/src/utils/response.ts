@@ -9,13 +9,12 @@ export const RPCResponse = {
    * ensuring consistency across API responses.
    *
    * @template T - The type of the response data.
-   * @param data - The data to return in the response.
    * @param message - Response message
-   * @param status - (Optional) HTTP status code, defaults to 200.
+   * @param detail - Optional -> Contains data and status code
    * @returns An `IRPCResponse<T>` with the provided data and no error.
    */
-  ok<T>(data: T, message: string, status: RPCResponseStatus = 200): IRPCResponse<T> {
-    return { status, data, error: null, message }
+  ok<T>(message: string, detail?: { data?: T, status: RPCResponseStatus }): IRPCResponse<T> {
+    return { status: detail?.status || 200, data: detail?.data, error: null, message }
   },
 
   /**

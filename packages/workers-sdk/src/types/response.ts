@@ -15,7 +15,7 @@ export type RPCError = {
 export type IRPCResponse<T> = {
   status: RPCResponseStatus
   message: string
-  data: T | null
+  data: T | null | undefined
   error: RPCError | null
   phrase?: RPCResponsePhrase
 }
