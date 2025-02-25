@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.2.2
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.1...v1.2.2)
+
+### 🩹 Fixes
+
+- **response:** Make status optional ([e3ee884](https://github.com/develit-io/develit-workers/commit/e3ee884))
+
+### 🤖 CI
+
+- Add build step ([878b7de](https://github.com/develit-io/develit-workers/commit/878b7de))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](http://github.com/kleinpetr))
+- Daniel Klein <daniel@develit.io>
+
 ## v1.2.1
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.0...v1.2.1)
