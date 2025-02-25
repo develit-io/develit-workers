@@ -33,6 +33,9 @@ jobs:
 
       - name: Typecheck code
         run: pnpm run typecheck
+
+      - name: Build code
+        run: pnpm run build
 # TODO: enable test in CI once ready
 #      - name: Run unit tests
 #        run: pnpm run test:unit:all
