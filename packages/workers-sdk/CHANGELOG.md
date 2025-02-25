@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.2.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.0...v1.2.1)
+
+### 💅 Refactors
+
+- **response:** Update RPCResponse ([8da921d](https://github.com/develit-io/develit-workers/commit/8da921d))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+
 ## v1.2.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.1.3...v1.2.0)
