@@ -13,7 +13,7 @@ export const RPCResponse = {
    * @param detail - Optional -> Contains data and status code
    * @returns An `IRPCResponse<T>` with the provided data and no error.
    */
-  ok<T>(message: string, detail?: { data?: T, status: RPCResponseStatus }): IRPCResponse<T> {
+  ok<T>(message: string, detail?: { data?: T, status?: RPCResponseStatus }): IRPCResponse<T> {
     return { status: detail?.status || 200, data: detail?.data, error: null, message }
   },
 
