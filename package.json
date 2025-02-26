@@ -7,7 +7,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "pnpm -r typecheck",
-    "postinstall": "simple-git-hooks && pnpm lint:fix"
+    "postinstall": "simple-git-hooks && pnpm lint:fix",
+    "sdk:build": "pnpm --filter @develit-io/workers-sdk build",
+    "build": "pnpm sdk:build"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
