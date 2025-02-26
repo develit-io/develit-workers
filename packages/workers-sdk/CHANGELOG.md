@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.2.3
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.2...v1.2.3)
+
+### 💅 Refactors
+
+- **error:** Rpc to internal ([97f75fa](https://github.com/develit-io/develit-workers/commit/97f75fa))
+
+### 🤖 CI
+
+- Fix build ([706e1d1](https://github.com/develit-io/develit-workers/commit/706e1d1))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+- Daniel Klein <daniel@develit.io>
+
 ## v1.2.2
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.1...v1.2.2)
