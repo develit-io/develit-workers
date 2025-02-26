@@ -1,6 +1,6 @@
-import type { RPCError, RPCErrorResponseStatus } from '../types'
+import type { InternalError, InternalErrorResponseStatus } from '../types'
 
-export const createRPCError = (error: unknown, details?: { status?: RPCErrorResponseStatus, code?: string, message?: string }): RPCError => {
+export const createInternalError = (error: unknown, details?: { status?: InternalErrorResponseStatus, code?: string, message?: string }): InternalError => {
   return {
     status: details?.status || 500,
     code: details?.code || 'UNKNOWN_ERROR',
@@ -8,7 +8,7 @@ export const createRPCError = (error: unknown, details?: { status?: RPCErrorResp
   }
 }
 
-export const isRPCError = (error: unknown): error is RPCError => {
+export const isInternalError = (error: unknown): error is InternalError => {
   return (
     typeof error === 'object'
     && error !== null

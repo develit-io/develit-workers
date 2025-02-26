@@ -1,5 +1,5 @@
 import type z from 'zod'
-import type { RPCError } from '../types'
+import type { InternalError } from '../types'
 
 /**
  * Validates input parameters against a given Zod schema.
@@ -15,7 +15,7 @@ import type { RPCError } from '../types'
 export const validateRPCInput = <S extends z.Schema>(
   params: z.infer<S>,
   schema: S,
-): RPCError | null => {
+): InternalError | null => {
   const result = schema.safeParse(params)
 
   return result.success

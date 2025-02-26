@@ -1,5 +1,5 @@
-import type { RPCError } from '../types'
-import { createRPCError, isRPCError } from '.'
+import type { InternalError } from '../types'
+import { createInternalError, isInternalError } from '.'
 
 /**
  * A utility function to handle async operations and return a standardized result.
@@ -13,7 +13,7 @@ import { createRPCError, isRPCError } from '.'
  *          - The resolved data (`T | null`) if successful.
  *          - An `RPCError` object (`RPCError | null`) if an error occurs.
  */
-type Result<T> = [data: T | null, error: RPCError | null]
+type Result<T> = [data: T | null, error: InternalError | null]
 
 /**
  * Executes a given promise and returns the result in a structured format.
@@ -32,6 +32,6 @@ export const useResult = async <T>(promise: Promise<T>): Promise<Result<T>> => {
     return [await promise, null]
   }
   catch (error) {
-    return [null, isRPCError(error) ? error : createRPCError(error)]
+    return [null, isInternalError(error) ? error : createInternalError(error)]
   }
 }

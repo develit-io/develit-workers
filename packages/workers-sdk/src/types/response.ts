@@ -1,21 +1,21 @@
-import type { StatusCodes as RPCResponseStatus } from 'http-status-codes'
-import { ReasonPhrases as RPCResponsePhrase } from 'http-status-codes'
+import type { StatusCodes as InternalResponseStatus } from 'http-status-codes'
+import { ReasonPhrases as InternalResponsePhrase } from 'http-status-codes'
 
-export { RPCResponseStatus }
-export { RPCResponsePhrase }
+export { InternalResponseStatus }
+export { InternalResponsePhrase }
 
-export type RPCErrorResponseStatus = Exclude<RPCResponseStatus, 200 | 201 | 202 | 203 | 204 | 205 | 206 | 207>
+export type InternalErrorResponseStatus = Exclude<InternalResponseStatus, 200 | 201 | 202 | 203 | 204 | 205 | 206 | 207>
 
-export type RPCError = {
-  status: RPCErrorResponseStatus
+export type InternalError = {
+  status: InternalErrorResponseStatus
   code: string
   message: string
 }
 
 export type IRPCResponse<T> = {
-  status: RPCResponseStatus
+  status: InternalResponseStatus
   message: string
   data: T | null | undefined
-  error: RPCError | null
-  phrase?: RPCResponsePhrase
+  error: boolean
+  phrase?: InternalResponsePhrase
 }
