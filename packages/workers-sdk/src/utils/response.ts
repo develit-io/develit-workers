@@ -1,5 +1,5 @@
 import { consola } from 'consola'
-import type { IRPCResponse, RPCError, RPCResponseStatus } from '../types'
+import type { IRPCResponse, InternalError, InternalResponseStatus } from '../types'
 
 export const RPCResponse = {
   /**
@@ -13,8 +13,8 @@ export const RPCResponse = {
    * @param detail - Optional -> Contains data and status code
    * @returns An `IRPCResponse<T>` with the provided data and no error.
    */
-  ok<T>(message: string, detail?: { data?: T, status?: RPCResponseStatus }): IRPCResponse<T> {
-    return { status: detail?.status || 200, data: detail?.data, error: null, message }
+  ok<T>(message: string, detail?: { data?: T, status?: InternalResponseStatus }): IRPCResponse<T> {
+    return { status: detail?.status || 200, data: detail?.data, error: false, message }
   },
 
   /**
@@ -26,9 +26,9 @@ export const RPCResponse = {
    * @param error - An `RPCError` containing error details.
    * @returns An `IRPCResponse<T>` with `null` data and the provided error.
    */
-  serviceError<T>(error: RPCError): IRPCResponse<T> {
+  serviceError<T>(error: InternalError): IRPCResponse<T> {
     consola.error(error.message)
-    return { status: error.status, message: error.message, data: null as T, error }
+    return { status: error.status, message: error.message, data: null as T, error: true }
   },
 
   /**
@@ -41,7 +41,7 @@ export const RPCResponse = {
    * @param error - An `RPCError` representing a validation failure.
    * @returns An `IRPCResponse<T>` with `null` data and the provided error.
    */
-  validationError<T>(error: RPCError): IRPCResponse<T> {
+  validationError<T>(error: InternalError): IRPCResponse<T> {
     return RPCResponse.serviceError(error)
   },
 }
