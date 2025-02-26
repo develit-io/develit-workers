@@ -1,6 +1,54 @@
 # Changelog
 
 
+## v1.2.2
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.1...v1.2.2)
+
+### 🩹 Fixes
+
+- **response:** Make status optional ([e3ee884](https://github.com/develit-io/develit-workers/commit/e3ee884))
+
+### 🤖 CI
+
+- Add build step ([878b7de](https://github.com/develit-io/develit-workers/commit/878b7de))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](http://github.com/kleinpetr))
+- Daniel Klein <daniel@develit.io>
+
+## v1.2.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.0...v1.2.1)
+
+### 💅 Refactors
+
+- **response:** Update RPCResponse ([8da921d](https://github.com/develit-io/develit-workers/commit/8da921d))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+
+## v1.2.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.1.3...v1.2.0)
+
+### 🚀 Enhancements
+
+- **sdk:** Add db types for joins, add docs for utils and types ([a933f8e](https://github.com/develit-io/develit-workers/commit/a933f8e))
+- Update ModifiedAt column when updating row ([#3](https://github.com/develit-io/develit-workers/pull/3))
+- **response:** Add message to response and update status codes and phrases ([74e5f40](https://github.com/develit-io/develit-workers/commit/74e5f40))
+
+### 🩹 Fixes
+
+- **sdk:** Fix build ([bf54506](https://github.com/develit-io/develit-workers/commit/bf54506))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+- FF <filip.f@develit.io>
+
 ## v1.1.3
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.1.2...v1.1.3)
