@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.2.4
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.3...v1.2.4)
+
+### 🩹 Fixes
+
+- CreatedAt column creates Unix timestamp in seconds ([#11](https://github.com/develit-io/develit-workers/pull/11))
+
+### ❤️ Contributors
+
+- FF <filip.f@develit.io>
+
 ## v1.2.3
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.2...v1.2.3)
