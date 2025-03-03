@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.4...v1.3.0)
+
+### 🚀 Enhancements
+
+- **worker:** Default fetch for status info ([7404af2](https://github.com/develit-io/develit-workers/commit/7404af2))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+
 ## v1.2.4
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.3...v1.2.4)
