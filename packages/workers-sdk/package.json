@@ -24,17 +24,16 @@
     "dist"
   ],
   "dependencies": {
-    "@cloudflare/workers-types": "^4.20250204.0",
-    "@types/http-status-codes": "^1.2.0",
-    "@types/node": "20.8.3",
+    "@cloudflare/workers-types": "^4.20250224.0",
     "consola": "^3.4.0",
-    "drizzle-kit": "^0.30.4",
-    "drizzle-orm": "^0.39.2",
-    "http-status-codes": "^2.3.0",
-    "zod": "^3.24.1"
+    "drizzle-kit": "^0.30.5",
+    "drizzle-orm": "^0.39.3",
+    "h3": "^1.15.1",
+    "http-status-codes": "2.3.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "typescript": "^5.7.3",
-    "unbuild": "^3.3.1"
+    "typescript": "^5.8.2",
+    "unbuild": "^3.5.0"
   }
 }
