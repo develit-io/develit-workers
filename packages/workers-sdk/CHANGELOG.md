@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.4.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.3.0...v1.4.0)
+
+### 🚀 Enhancements
+
+- **nitro:** Guards ([18da39d](https://github.com/develit-io/develit-workers/commit/18da39d))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+
 ## v1.3.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.2.4...v1.3.0)
