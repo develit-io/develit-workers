@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.4.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.4.0...v1.4.1)
+
+### 📦 Build
+
+- **config:** Add explicit cf deps ([959d597](https://github.com/develit-io/develit-workers/commit/959d597))
+
+### 🏡 Chore
+
+- Add LICENSE ([760479a](https://github.com/develit-io/develit-workers/commit/760479a))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v1.4.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.3.0...v1.4.0)
