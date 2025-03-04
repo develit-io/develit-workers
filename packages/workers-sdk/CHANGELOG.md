@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.4.2
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.4.1...v1.4.2)
+
+### 📦 Build
+
+- **config:** Revert explicit cf deps ([1d6ab1b](https://github.com/develit-io/develit-workers/commit/1d6ab1b))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v1.4.1
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.4.0...v1.4.1)
