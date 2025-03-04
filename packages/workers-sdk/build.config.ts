@@ -19,7 +19,7 @@ export default defineBuildConfig({
   //   '@cloudflare/workers-types',
   //   'cloudflare:workers',
   // ],
-  // dependencies: [
-  //   '@cloudflare/workers-types/experimental',
-  // ],
+  dependencies: [
+    '@cloudflare/workers-types/experimental',
+  ],
 })
