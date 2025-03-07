@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.4.3
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.4.2...v1.4.3)
+
+### 💅 Refactors
+
+- **exports:** Remove namespaces and remove guards ([eaa081b](https://github.com/develit-io/develit-workers/commit/eaa081b))
+- **exports:** Remove namespaces and remove guards ([371ad9b](https://github.com/develit-io/develit-workers/commit/371ad9b))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+
 ## v1.4.2
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.4.1...v1.4.2)
