@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.6.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.6.0...v1.6.1)
+
+### 💅 Refactors
+
+- **sdk:** Update logging identifier ([c61db68](https://github.com/develit-io/develit-workers/commit/c61db68))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v1.6.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.5.0...v1.6.0)
