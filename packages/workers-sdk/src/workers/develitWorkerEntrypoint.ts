@@ -7,10 +7,24 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
     return new Response('Service is up and running!')
   }
 
-  log(data: object) {
+  log(action: string, data: object, identifier?: string) {
     console.log({
       entrypoint: this.name,
-      ...data,
+      action,
+      identifier: identifier ?? `${this.name}:${action}:log`,
+      data,
     })
+  }
+
+  logInput(action: string, data: object) {
+    this.log(action, data, `${this.name}:${action}:input`)
+  }
+
+  logOutput(action: string, data: object) {
+    this.log(action, data, `${this.name}:${action}:output`)
+  }
+
+  logError(action: string, error: object) {
+    this.log(action, error, `${this.name}:${action}:error`)
   }
 }
