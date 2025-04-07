@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.6.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.5.0...v1.6.0)
+
+### 🚀 Enhancements
+
+- **sdk:** Extend log methods on DevelitWorkerEntrypoint ([56f3018](https://github.com/develit-io/develit-workers/commit/56f3018))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v1.5.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.4.3...v1.5.0)
