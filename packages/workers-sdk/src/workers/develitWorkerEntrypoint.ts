@@ -8,10 +8,11 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
   }
 
   log(action: string, data: object, identifier?: string) {
-    console.log({
+    const name = identifier ?? `${this.name}:${action}:log`
+    console.log(name, {
       entrypoint: this.name,
       action,
-      identifier: identifier ?? `${this.name}:${action}:log`,
+      identifier: name,
       data,
     })
   }
