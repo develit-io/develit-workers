@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.5.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.4.3...v1.5.0)
+
+### 🚀 Enhancements
+
+- **sdk:** Add basic logging abstraction ([bb6c3e8](https://github.com/develit-io/develit-workers/commit/bb6c3e8))
+
+### 🩹 Fixes
+
+- CreatedAt default value is not a whole number ([#14](https://github.com/develit-io/develit-workers/pull/14))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+- Gosha <malgorzata@develit.io>
+
 ## v1.4.3
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.4.2...v1.4.3)
