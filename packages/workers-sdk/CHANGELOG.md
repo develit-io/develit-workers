@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.7.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.6.1...v1.7.0)
+
+### 🚀 Enhancements
+
+- Add firstOrError ([#23](https://github.com/develit-io/develit-workers/pull/23))
+- **sdk:** Add queue logs ([2c84958](https://github.com/develit-io/develit-workers/commit/2c84958))
+
+### 🩹 Fixes
+
+- CreatedAt columns is nullable ([#20](https://github.com/develit-io/develit-workers/pull/20))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+- FF <filip.f@develit.io>
+
 ## v1.6.1
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.6.0...v1.6.1)
