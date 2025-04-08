@@ -7,7 +7,7 @@
 		"moduleResolution": "bundler",
 		"types": [
 			"node",
-			"@cloudflare/workers-types/experimental",
+			"@cloudflare/workers-types",
 		],
 		"resolveJsonModule": true,
 		"allowJs": true,
@@ -20,4 +20,3 @@
 		"strict": true,
 	},
 }
-
