@@ -8,7 +8,15 @@ export const drizzleConfig = defineConfig({
 })
 
 export function first<T>(rows: T[]): T | undefined {
-  return rows[0] || undefined
+  return rows.length > 0 ? rows[0] : undefined
+}
+
+export function firstOrError<T>(rows: T[]): T {
+  if (rows.length === 0) {
+    throw new Error('Query did not return any data.')
+  }
+
+  return rows[0]
 }
 
 export const uuidv4 = crypto.randomUUID
