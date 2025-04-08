@@ -17,6 +17,14 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
     })
   }
 
+  logQueuePush(action: string, data: object) {
+    this.log(action, data, `${this.name}:${action}:queue-push`)
+  }
+
+  logQueuePull(action: string, data: object) {
+    this.log(action, data, `${this.name}:${action}:queue-pull`)
+  }
+
   logInput(action: string, data: object) {
     this.log(action, data, `${this.name}:${action}:input`)
   }
