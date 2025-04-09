@@ -14,6 +14,7 @@ export {
   RPCResponse,
   useResult,
   first,
+  firstOrError,
   drizzleConfig,
   createInternalError,
   isInternalError,
