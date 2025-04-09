@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.7.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.7.0...v1.7.1)
+
+### 🩹 Fixes
+
+- **sdk:** Export firstOrError ([9ea974d](https://github.com/develit-io/develit-workers/commit/9ea974d))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v1.7.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.6.1...v1.7.0)
