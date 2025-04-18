@@ -36,4 +36,13 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
   logError(action: string, error: object) {
     this.log(action, error, `${this.name}:${action}:error`)
   }
+
+  pushToQueue<T>(queue: Queue, message: T | T[]): Promise<void> {
+    if (!Array.isArray(message))
+      return queue.send(message)
+
+    return queue.sendBatch(message.map(m => ({
+      body: m,
+    })))
+  }
 }
