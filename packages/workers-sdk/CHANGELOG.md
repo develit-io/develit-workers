@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.8.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.7.1...v1.8.0)
+
+### 🚀 Enhancements
+
+- **entrypoint:** Add pushToQueue() method ([e6959e1](https://github.com/develit-io/develit-workers/commit/e6959e1))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v1.7.1
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.7.0...v1.7.1)
