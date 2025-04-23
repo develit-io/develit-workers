@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.1.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v3.0.0...v3.1.0)
+
+### 🚀 Enhancements
+
+- **sdk:** Use v8 as default engine for queues ([2608239](https://github.com/develit-io/develit-workers/commit/2608239))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v3.0.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v2.0.3...v3.0.0)
