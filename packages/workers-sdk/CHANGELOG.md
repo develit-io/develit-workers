@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v2.0.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v1.8.0...v2.0.0)
+
+### 🚀 Enhancements
+
+- **sdk:** ⚠️  Add queue superjson serialization and pullQueueBatch() method to entrypoint ([b99b31b](https://github.com/develit-io/develit-workers/commit/b99b31b))
+
+### 🏡 Chore
+
+- (deps-dev): bump lint-staged from 15.5.0 to 15.5.1 ([#25](https://github.com/develit-io/develit-workers/pull/25))
+
+#### ⚠️ Breaking Changes
+
+- **sdk:** ⚠️  Add queue superjson serialization and pullQueueBatch() method to entrypoint ([b99b31b](https://github.com/develit-io/develit-workers/commit/b99b31b))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v1.8.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.7.1...v1.8.0)
