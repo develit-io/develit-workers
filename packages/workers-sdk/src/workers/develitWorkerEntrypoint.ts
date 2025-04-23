@@ -1,4 +1,5 @@
 import { WorkerEntrypoint } from 'cloudflare:workers'
+import superjson from 'superjson'
 
 export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEnv> {
   protected name: string = 'not-set'
@@ -44,5 +45,17 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
     return queue.sendBatch(message.map(m => ({
       body: m,
     })))
+  }
+
+  pullQueueBatch<T>(batch: MessageBatch): MessageBatch<T> {
+    const messages = batch.messages.map(message => ({
+      ...message,
+      body: superjson.parse<T>(message.body as string),
+    }))
+
+    return {
+      ...batch,
+      messages,
+    }
   }
 }
