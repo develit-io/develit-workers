@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v2.0.2
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v2.0.0...v2.0.2)
+
 ## v2.0.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v1.8.0...v2.0.0)
