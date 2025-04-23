@@ -1,21 +1,9 @@
 # Changelog
 
 
-## v2.0.0
+## v2.0.1
 
-[compare changes](https://github.com/develit-io/develit-workers/compare/v1.8.0...v2.0.0)
-
-### 🚀 Enhancements
-
-- **sdk:** ⚠️  Add queue superjson serialization and pullQueueBatch() method to entrypoint ([8b0243f](https://github.com/develit-io/develit-workers/commit/8b0243f))
-
-#### ⚠️ Breaking Changes
-
-- **sdk:** ⚠️  Add queue superjson serialization and pullQueueBatch() method to entrypoint ([8b0243f](https://github.com/develit-io/develit-workers/commit/8b0243f))
-
-### ❤️ Contributors
-
-- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+[compare changes](https://github.com/develit-io/develit-workers/compare/v2.0.0...v2.0.1)
 
 ## v1.8.0
 
@@ -309,4 +297,3 @@
 
 - Klein Petr ([@kleinpetr](http://github.com/kleinpetr))
 - Daniel Klein <daniel@develit.io>
-
