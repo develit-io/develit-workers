@@ -15,14 +15,16 @@ import type { InternalError } from '../types'
 export const validateRPCInput = <S extends z.Schema>(
   params: z.infer<S>,
   schema: S,
-): InternalError | null => {
+): [z.infer<S> | null, InternalError | null] => {
   const result = schema.safeParse(params)
 
-  return result.success
+  const error = result.success
     ? null
     : {
         status: 400, // ✅ HTTP 400 Bad Request
         code: 'INVALID_INPUT', // ✅ Clear error identifier
-        message: result.error.message, // ✅ Provides detailed validation error message
+        message: result.error?.message, // ✅ Provides detailed validation error message
       }
+
+  return [result.data || null, error]
 }
