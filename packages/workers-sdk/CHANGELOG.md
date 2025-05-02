@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v3.2.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v3.1.0...v3.2.0)
+
+### 🚀 Enhancements
+
+- **validate:** Return data from parse as well to support default values ([1989e33](https://github.com/develit-io/develit-workers/commit/1989e33))
+
+### 🩹 Fixes
+
+- **validate:** Params type ([49e4b96](https://github.com/develit-io/develit-workers/commit/49e4b96))
+- **validate:** Generic type ([f1352d3](https://github.com/develit-io/develit-workers/commit/f1352d3))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+
 ## v3.1.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v3.0.0...v3.1.0)
