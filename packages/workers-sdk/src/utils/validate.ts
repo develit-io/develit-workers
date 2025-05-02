@@ -13,7 +13,7 @@ import type { InternalError } from '../types'
  * @returns `null` if validation succeeds, otherwise an `RPCError` object.
  */
 export const validateRPCInput = <S extends z.ZodTypeAny>(
-  params: unknown,
+  params: z.infer<S>,
   schema: S,
 ): [z.infer<S> | null, InternalError | null] => {
   const result = schema.safeParse(params)
@@ -21,9 +21,9 @@ export const validateRPCInput = <S extends z.ZodTypeAny>(
   const error = result.success
     ? null
     : {
-        status: 400,
-        code: 'INVALID_INPUT',
-        message: result.error?.message,
+        status: 400, // ✅ HTTP 400 Bad Request
+        code: 'INVALID_INPUT', // ✅ Clear error identifier
+        message: result.error?.message, // ✅ Provides detailed validation error message
       }
 
   return [result.data || null, error]
