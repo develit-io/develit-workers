@@ -12,7 +12,7 @@ import type { InternalError } from '../types'
  * @param schema - The Zod schema used for validation.
  * @returns `null` if validation succeeds, otherwise an `RPCError` object.
  */
-export const validateRPCInput = <S extends z.ZodTypeAny>(
+export const validateRPCInput = <S extends z.Schema>(
   params: z.infer<S>,
   schema: S,
 ): [z.infer<S> | null, InternalError | null] => {
