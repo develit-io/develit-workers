@@ -1,10 +1,44 @@
 import { WorkerEntrypoint } from 'cloudflare:workers'
+import type z from 'zod'
+import { createInternalError, RPCResponse } from '../utils'
 
 export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEnv> {
   protected name: string = 'not-set'
 
   async fetch() {
     return new Response('Service is up and running!')
+  }
+
+  handleActionInput<T extends z.Schema>({
+    name,
+    input,
+    schema,
+  }: { name: string, input: z.infer<T>, schema: T }) {
+    this.logInput(name, input)
+
+    const result = schema.safeParse(input)
+
+    // Throw an error when parsing did not eneded successfuly
+    if (!result.success) {
+      const validationError = {
+        status: 400,
+        code: 'INVALID_INPUT',
+        message: result.error.message,
+      }
+
+      this.logError(name, validationError)
+      throw RPCResponse.validationError(validationError)
+    }
+
+    // Ensure actual data are returned
+    if (!result.data) {
+      throw createInternalError({
+        statusCode: 418,
+        message: `Couldn't start processing the request.`,
+      })
+    }
+
+    return result.data as z.infer<T>
   }
 
   log(action: string, data: object, identifier?: string) {
