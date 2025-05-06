@@ -8,7 +8,7 @@ export const action = (name: string): MethodDecorator => {
     _target: unknown,
     _propertyKey: string | symbol,
     descriptor: PropertyDescriptor,
-  ): void => {
+  ): PropertyDescriptor => {
     const originalMethod = descriptor.value as (...args: unknown[]) => unknown
 
     interface ActionContext {
@@ -22,5 +22,7 @@ export const action = (name: string): MethodDecorator => {
       this.action = name
       return originalMethod.apply(this, args)
     }
+
+    return descriptor
   }
 }

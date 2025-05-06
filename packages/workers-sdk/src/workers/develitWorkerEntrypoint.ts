@@ -3,7 +3,7 @@ import type z from 'zod'
 import { createInternalError, RPCResponse } from '../utils'
 
 export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEnv> {
-  abstract name: string
+  protected abstract name: string
 
   protected action: string = 'not-set'
 
