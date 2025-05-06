@@ -1,25 +1,18 @@
 export { base } from './database'
 
 export type {
-  InternalResponsePhrase,
-  InternalResponseStatus,
-  InternalErrorResponseStatus,
-  InternalError,
-  IRPCResponse,
-  InferResultType,
-  IncludeRelation,
+  IncludeRelation, InferResultType, InternalError, InternalErrorResponseStatus, InternalResponsePhrase,
+  InternalResponseStatus, IRPCResponse,
 } from './types'
 
 export {
-  RPCResponse,
-  useResult,
-  first,
-  firstOrError,
-  drizzleConfig,
-  createInternalError,
-  isInternalError,
-  validateRPCInput,
-  uuidv4,
+  createInternalError, drizzleConfig, first,
+  firstOrError, isInternalError, RPCResponse,
+  useResult, uuidv4,
 } from './utils'
+
+export {
+  action,
+} from './decorators'
 
 export { DevelitWorkerEntrypoint } from './workers'
