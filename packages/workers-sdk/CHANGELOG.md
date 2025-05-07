@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v3.4.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v3.3.0...v3.4.0)
+
+### 🚀 Enhancements
+
+- Add queue backoff calculator ([#32](https://github.com/develit-io/develit-workers/pull/32))
+
+### ❤️ Contributors
+
+- FF <filip.f@develit.io>
+
 ## v3.3.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v3.2.0...v3.3.0)
