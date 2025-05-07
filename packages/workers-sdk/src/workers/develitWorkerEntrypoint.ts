@@ -1,40 +1,75 @@
 import { WorkerEntrypoint } from 'cloudflare:workers'
+import type z from 'zod'
+import { createInternalError, RPCResponse } from '../utils'
 
 export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEnv> {
-  protected name: string = 'not-set'
+  protected abstract name: string
+
+  protected action: string = 'not-set'
 
   async fetch() {
     return new Response('Service is up and running!')
   }
 
-  log(action: string, data: object, identifier?: string) {
-    const name = identifier ?? `${this.name}:${action}:log`
+  handleActionInput<T extends z.Schema>({
+    input,
+    schema,
+  }: { input: z.infer<T>, schema: T }) {
+    this.logInput(input)
+
+    const result = schema.safeParse(input)
+
+    // Throw an error when parsing did not eneded successfuly
+    if (!result.success) {
+      const validationError = {
+        status: 400,
+        code: 'INVALID_INPUT',
+        message: result.error.message,
+      }
+
+      this.logError(validationError)
+      throw RPCResponse.validationError(validationError)
+    }
+
+    // Ensure actual data are returned
+    if (!result.data) {
+      throw createInternalError({
+        statusCode: 418,
+        message: `Couldn't start processing the request.`,
+      })
+    }
+
+    return result.data as z.infer<T>
+  }
+
+  log(data: object, identifier?: string) {
+    const name = identifier ?? `${this.name}:${this.action}:log`
     console.log(name, {
       entrypoint: this.name,
-      action,
+      action: this.action,
       identifier: name,
       data,
     })
   }
 
-  logQueuePush(action: string, data: object) {
-    this.log(action, data, `${this.name}:${action}:queue-push`)
+  logQueuePush(data: object) {
+    this.log(data, `${this.name}:${this.action}:queue-push`)
   }
 
-  logQueuePull(action: string, data: object) {
-    this.log(action, data, `${this.name}:${action}:queue-pull`)
+  logQueuePull(data: object) {
+    this.log(data, `${this.name}:${this.action}:queue-pull`)
   }
 
-  logInput(action: string, data: object) {
-    this.log(action, data, `${this.name}:${action}:input`)
+  logInput(data: object) {
+    this.log(data, `${this.name}:${this.action}:input`)
   }
 
-  logOutput(action: string, data: object) {
-    this.log(action, data, `${this.name}:${action}:output`)
+  logOutput(data: object) {
+    this.log(data, `${this.name}:${this.action}:output`)
   }
 
-  logError(action: string, error: object) {
-    this.log(action, error, `${this.name}:${action}:error`)
+  logError(error: object) {
+    this.log(error, `${this.name}:${this.action}:error`)
   }
 
   pushToQueue<T>(queue: Queue, message: T | T[]): Promise<void> {
