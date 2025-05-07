@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v3.3.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v3.2.0...v3.3.0)
+
+### 🚀 Enhancements
+
+- Add error handling for action input ([#30](https://github.com/develit-io/develit-workers/pull/30))
+
+### 🏡 Chore
+
+- (deps-dev): bump simple-git-hooks from 2.12.1 to 2.13.0 ([#28](https://github.com/develit-io/develit-workers/pull/28))
+- (deps-dev): bump eslint from 9.24.0 to 9.25.1 ([#27](https://github.com/develit-io/develit-workers/pull/27))
+
+### ❤️ Contributors
+
+- FF <filip.f@develit.io>
+
 ## v3.2.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v3.1.0...v3.2.0)
