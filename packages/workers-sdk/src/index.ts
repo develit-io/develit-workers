@@ -6,8 +6,8 @@ export type {
 } from './types'
 
 export {
-  createInternalError, drizzleConfig, first,
-  firstOrError, isInternalError, RPCResponse,
+  calculateExponentialBackoff, createInternalError, drizzleConfig,
+  first, firstOrError, isInternalError, RPCResponse,
   useResult, uuidv4,
 } from './utils'
 
