@@ -8,7 +8,7 @@ export type {
 export {
   calculateExponentialBackoff, createInternalError, drizzleConfig,
   first, firstOrError, isInternalError, RPCResponse,
-  useResult, uuidv4,
+  useResult, useResultSync, uuidv4,
 } from './utils'
 
 export {
