@@ -61,6 +61,10 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
     this.log(data, `${this.name}:${this.action}:queue-pull`)
   }
 
+  logQueueRetries(data: object) {
+    this.log(data, `${this.name}:${this.action}:queue-retries`)
+  }
+
   logInput(data: object) {
     this.log(data, `${this.name}:${this.action}:input`)
   }

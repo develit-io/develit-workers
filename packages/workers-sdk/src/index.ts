@@ -13,6 +13,7 @@ export {
 
 export {
   action,
+  withRetryCounter,
 } from './decorators'
 
 export { DevelitWorkerEntrypoint } from './workers'
