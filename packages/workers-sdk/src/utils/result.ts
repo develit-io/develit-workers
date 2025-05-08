@@ -35,3 +35,24 @@ export const useResult = async <T>(promise: Promise<T>): Promise<Result<T>> => {
     return [null, isInternalError(error) ? error : createInternalError(error)]
   }
 }
+
+/**
+ * Executes a given function and returns the result in a structured format.
+ *
+ * Instead of throwing errors, this function catches them and returns
+ * a standardized `RPCError` object, making error handling more predictable.
+ *
+ * @template T - The expected return type of the function.
+ * @param function - A function representing an synchronous operation.
+ * @returns A a tuple:
+ *          - `[data, null]` if the operation succeeds.
+ *          - `[null, error]` if the operation fails.
+ */
+export const useResultSync = <T>(fn: () => T): Result<T> => {
+  try {
+    return [fn(), null]
+  }
+  catch (error) {
+    return [null, isInternalError(error) ? error : createInternalError(error)]
+  }
+}
