@@ -1,4 +1,5 @@
 import { WorkerEntrypoint } from 'cloudflare:workers'
+import superjson from 'superjson'
 import type z from 'zod'
 import { createInternalError, RPCResponse } from '../utils'
 
@@ -48,7 +49,7 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
       entrypoint: this.name,
       action: this.action,
       identifier: name,
-      data,
+      data: superjson.stringify(data),
     })
   }
 
