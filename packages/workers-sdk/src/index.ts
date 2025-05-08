@@ -13,7 +13,8 @@ export {
 
 export {
   action,
-  withRetryCounter,
+  cloudflareQueue,
+  service,
 } from './decorators'
 
 export { DevelitWorkerEntrypoint } from './workers'

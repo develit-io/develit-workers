@@ -1,3 +1,5 @@
+import type { DevelitWorkerEntrypoint } from '../../workers'
+
 /**
  * Method decorator that sets `this.action` to a specific name before method execution.
  *
@@ -11,12 +13,8 @@ export const action = (name: string): MethodDecorator => {
   ): PropertyDescriptor => {
     const originalMethod = descriptor.value as (...args: unknown[]) => unknown
 
-    interface ActionContext {
-      action: string
-    }
-
     descriptor.value = function (
-      this: ActionContext,
+      this: DevelitWorkerEntrypoint<unknown>,
       ...args: unknown[]
     ): unknown {
       this.action = name
