@@ -4,8 +4,7 @@ import type z from 'zod'
 import { createInternalError, RPCResponse } from '../utils'
 
 export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEnv> {
-  protected abstract name: string
-
+  protected name: string = 'not-set'
   protected action: string = 'not-set'
 
   async fetch() {
@@ -59,6 +58,10 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
 
   logQueuePull(data: object) {
     this.log(data, `${this.name}:${this.action}:queue-pull`)
+  }
+
+  logQueueRetries(data: object) {
+    this.log(data, `${this.name}:${this.action}:queue-retries`)
   }
 
   logInput(data: object) {

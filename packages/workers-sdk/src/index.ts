@@ -13,6 +13,8 @@ export {
 
 export {
   action,
+  cloudflareQueue,
+  service,
 } from './decorators'
 
 export { DevelitWorkerEntrypoint } from './workers'
