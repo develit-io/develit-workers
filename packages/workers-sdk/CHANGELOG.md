@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v3.5.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v3.4.0...v3.5.0)
+
+### 🚀 Enhancements
+
+- **sdk:** Use result sync and stringify data when logging ([7e8b034](https://github.com/develit-io/develit-workers/commit/7e8b034))
+- **sdk:** Export useResultSync from sdk ([16dac33](https://github.com/develit-io/develit-workers/commit/16dac33))
+- **decorator:** WithRetryCounter ([4e20fff](https://github.com/develit-io/develit-workers/commit/4e20fff))
+- **decorator:** Service ([0ed4951](https://github.com/develit-io/develit-workers/commit/0ed4951))
+- **sevice-decorator:** Add suffix ([1841033](https://github.com/develit-io/develit-workers/commit/1841033))
+
+### ❤️ Contributors
+
+- Daniel Klein <daniel@develit.io>
+
 ## v3.4.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v3.3.0...v3.4.0)
