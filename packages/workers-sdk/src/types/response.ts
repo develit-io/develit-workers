@@ -4,7 +4,10 @@ import { ReasonPhrases as InternalResponsePhrase } from 'http-status-codes'
 export { InternalResponseStatus }
 export { InternalResponsePhrase }
 
-export type InternalErrorResponseStatus = Exclude<InternalResponseStatus, 200 | 201 | 202 | 203 | 204 | 205 | 206 | 207>
+export type InternalErrorResponseStatus = Exclude<
+  InternalResponseStatus,
+  200 | 201 | 202 | 203 | 204 | 205 | 206 | 207
+>
 
 export type InternalError = {
   status: InternalErrorResponseStatus

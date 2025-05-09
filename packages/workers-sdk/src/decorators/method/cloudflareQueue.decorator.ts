@@ -5,11 +5,20 @@ interface WithRetryCounterOptions {
   baseDelay: number
 }
 
-type AsyncMethod<TArgs extends unknown[] = unknown[], TResult = unknown> = (...args: TArgs) => Promise<TResult>
+type AsyncMethod<TArgs extends unknown[] = unknown[], TResult = unknown> = (
+  ...args: TArgs
+) => Promise<TResult>
 
-export function cloudflareQueue<TArgs extends unknown[] = unknown[], TResult = unknown>(
+export function cloudflareQueue<
+  TArgs extends unknown[] = unknown[],
+  TResult = unknown,
+>(
   options: WithRetryCounterOptions,
-): (target: unknown, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<AsyncMethod<TArgs, TResult>>) => void {
+): (
+  target: unknown,
+  propertyKey: string | symbol,
+  descriptor: TypedPropertyDescriptor<AsyncMethod<TArgs, TResult>>,
+) => void {
   return (_target, _propertyKey, descriptor) => {
     const originalMethod = descriptor.value!
 
@@ -26,7 +35,10 @@ export function cloudflareQueue<TArgs extends unknown[] = unknown[], TResult = u
         msg.retry = () => {
           retriedCount++
           return originalRetry({
-            delaySeconds: calculateExponentialBackoff(msg.attempts, options.baseDelay),
+            delaySeconds: calculateExponentialBackoff(
+              msg.attempts,
+              options.baseDelay,
+            ),
           })
         }
       })

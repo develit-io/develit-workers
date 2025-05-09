@@ -1,4 +1,8 @@
-import type { BuildQueryResult, DBQueryConfig, ExtractTablesWithRelations } from 'drizzle-orm'
+import type {
+  BuildQueryResult,
+  DBQueryConfig,
+  ExtractTablesWithRelations,
+} from 'drizzle-orm'
 
 /**
  * Utility type to infer possible relation includes (`with`) for a given table.
@@ -11,7 +15,7 @@ export type IncludeRelation<
   Tables extends Record<string, unknown>,
   TableName extends keyof ExtractTablesWithRelations<Tables>,
 > = DBQueryConfig<
-    'one' | 'many',
+  'one' | 'many',
   boolean,
   ExtractTablesWithRelations<Tables>,
   ExtractTablesWithRelations<Tables>[TableName]

@@ -1,15 +1,14 @@
-import type { InternalError } from '../types'
 import { createInternalError, isInternalError } from '.'
+import type { InternalError } from '../types'
 
 /**
- * A utility function to handle async operations and return a standardized result.
+ * A utility function to handle operations and return a standardized result.
  *
- * This function wraps a promise and ensures that both the resolved value
+ * This function wraps the call and ensures that both the resolved value
  * and any potential errors are captured in a structured tuple format.
  *
  * @template T - The type of the expected result.
- * @param promise - The promise to be executed.
- * @returns A promise that resolves to a tuple containing:
+ * @returns A call that resolves to a tuple containing:
  *          - The resolved data (`T | null`) if successful.
  *          - An `RPCError` object (`RPCError | null`) if an error occurs.
  */
@@ -29,9 +28,20 @@ type Result<T> = [data: T | null, error: InternalError | null]
  */
 export const useResult = async <T>(promise: Promise<T>): Promise<Result<T>> => {
   try {
-    return [await promise, null]
-  }
-  catch (error) {
+    const result = await promise
+
+    if (result) {
+      return [result, null]
+    } else {
+      return [
+        null,
+        createInternalError(null, {
+          message: 'Could not process the request. (ASYNC_RESULT_FAILED)',
+          status: 500,
+        }),
+      ]
+    }
+  } catch (error) {
     return [null, isInternalError(error) ? error : createInternalError(error)]
   }
 }
@@ -50,9 +60,20 @@ export const useResult = async <T>(promise: Promise<T>): Promise<Result<T>> => {
  */
 export const useResultSync = <T>(fn: () => T): Result<T> => {
   try {
-    return [fn(), null]
-  }
-  catch (error) {
+    const result = fn()
+
+    if (result) {
+      return [result, null]
+    } else {
+      return [
+        null,
+        createInternalError(null, {
+          message: 'Could not process the request. (SYNC_RESULT_FAILED)',
+          status: 500,
+        }),
+      ]
+    }
+  } catch (error) {
     return [null, isInternalError(error) ? error : createInternalError(error)]
   }
 }
