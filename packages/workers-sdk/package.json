@@ -6,6 +6,7 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
+    "typecheck": "tsc",
     "build": "unbuild",
     "prepack": "unbuild",
     "changelogen": "bunx changelogen@latest --bump",
