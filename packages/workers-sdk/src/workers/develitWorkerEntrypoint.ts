@@ -1,9 +1,11 @@
 import { WorkerEntrypoint } from 'cloudflare:workers'
 import superjson from 'superjson'
 import type z from 'zod'
-import { createInternalError, RPCResponse } from '../utils'
+import { RPCResponse, createInternalError } from '../utils'
 
-export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEnv> {
+export abstract class DevelitWorkerEntrypoint<
+  TEnv,
+> extends WorkerEntrypoint<TEnv> {
   protected name: string = 'not-set'
   protected action: string = 'not-set'
 
@@ -14,7 +16,7 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
   handleActionInput<T extends z.Schema>({
     input,
     schema,
-  }: { input: z.infer<T>, schema: T }) {
+  }: { input: z.infer<T>; schema: T }) {
     this.logInput(input)
 
     const result = schema.safeParse(input)
@@ -80,10 +82,12 @@ export abstract class DevelitWorkerEntrypoint<TEnv> extends WorkerEntrypoint<TEn
     if (!Array.isArray(message))
       return queue.send(message, { contentType: 'v8' })
 
-    return queue.sendBatch(message.map(m => ({
-      body: m,
-      contentType: 'v8',
-    })))
+    return queue.sendBatch(
+      message.map((m) => ({
+        body: m,
+        contentType: 'v8',
+      })),
+    )
   }
 
   // pullQueueBatch<T>(batch: MessageBatch<string>): MessageBatch<T> {

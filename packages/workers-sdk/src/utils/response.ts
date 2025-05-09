@@ -1,5 +1,9 @@
 import { consola } from 'consola'
-import type { IRPCResponse, InternalError, InternalResponseStatus } from '../types'
+import type {
+  IRPCResponse,
+  InternalError,
+  InternalResponseStatus,
+} from '../types'
 
 export const RPCResponse = {
   /**
@@ -13,8 +17,16 @@ export const RPCResponse = {
    * @param detail - Optional -> Contains data and status code
    * @returns An `IRPCResponse<T>` with the provided data and no error.
    */
-  ok<T>(message: string, detail?: { data?: T, status?: InternalResponseStatus }): IRPCResponse<T> {
-    return { status: detail?.status || 200, data: detail?.data, error: false, message }
+  ok<T>(
+    message: string,
+    detail?: { data?: T; status?: InternalResponseStatus },
+  ): IRPCResponse<T> {
+    return {
+      status: detail?.status || 200,
+      data: detail?.data,
+      error: false,
+      message,
+    }
   },
 
   /**
@@ -28,7 +40,12 @@ export const RPCResponse = {
    */
   serviceError<T>(error: InternalError): IRPCResponse<T> {
     consola.error(error.message)
-    return { status: error.status, message: error.message, data: null as T, error: true }
+    return {
+      status: error.status,
+      message: error.message,
+      data: null as T,
+      error: true,
+    }
   },
 
   /**
