@@ -28,19 +28,7 @@ type Result<T> = [data: T | null, error: InternalError | null]
  */
 export const useResult = async <T>(promise: Promise<T>): Promise<Result<T>> => {
   try {
-    const result = await promise
-
-    if (result) {
-      return [result, null]
-    } else {
-      return [
-        null,
-        createInternalError(null, {
-          message: 'Could not process the request. (ASYNC_RESULT_FAILED)',
-          status: 500,
-        }),
-      ]
-    }
+    return [await promise, null]
   } catch (error) {
     return [null, isInternalError(error) ? error : createInternalError(error)]
   }
@@ -60,19 +48,7 @@ export const useResult = async <T>(promise: Promise<T>): Promise<Result<T>> => {
  */
 export const useResultSync = <T>(fn: () => T): Result<T> => {
   try {
-    const result = fn()
-
-    if (result) {
-      return [result, null]
-    } else {
-      return [
-        null,
-        createInternalError(null, {
-          message: 'Could not process the request. (SYNC_RESULT_FAILED)',
-          status: 500,
-        }),
-      ]
-    }
+    return [fn(), null]
   } catch (error) {
     return [null, isInternalError(error) ? error : createInternalError(error)]
   }
