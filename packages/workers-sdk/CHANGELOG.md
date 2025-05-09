@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v4.0.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v3.5.0...v4.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Improve useresult error handling ([#39](https://github.com/develit-io/develit-workers/pull/39))
+
+### 🏡 Chore
+
+- Ignore dist dir when linting ([#40](https://github.com/develit-io/develit-workers/pull/40))
+- (deps-dev): bump zod from 3.24.2 to 3.24.4 ([#35](https://github.com/develit-io/develit-workers/pull/35))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Improve useresult error handling ([#39](https://github.com/develit-io/develit-workers/pull/39))
+
+### ❤️ Contributors
+
+- FF <filip.f@develit.io>
+
 ## v3.5.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v3.4.0...v3.5.0)
