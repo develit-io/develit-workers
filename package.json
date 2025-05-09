@@ -2,14 +2,14 @@
   "name": "@develit-io/workers",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
+  "workspaces": ["packages/*"],
   "scripts": {
+    "postinstall": "simple-git-hooks && bun lint:fix",
     "lint": "biome check",
     "lint:fix": "biome check --fix",
-    "typecheck": "pnpm -r typecheck",
-    "postinstall": "simple-git-hooks && pnpm lint:fix",
-    "sdk:build": "pnpm --filter @develit-io/workers-sdk build",
-    "build": "pnpm sdk:build"
+    "typecheck": "bun --filter '*' typecheck",
+    "sdk:build": "bun --filter '@develit-io/workers-sdk' build",
+    "build": "bun sdk:build"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
@@ -26,7 +26,7 @@
     "*": ["biome check --fix ."]
   },
   "simple-git-hooks": {
-    "commit-msg": "npx commitlint --edit $1",
-    "pre-commit": "npx lint-staged"
+    "commit-msg": "bunx commitlint --edit $1",
+    "pre-commit": "bunx lint-staged"
   }
 }

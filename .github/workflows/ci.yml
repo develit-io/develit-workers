@@ -2,40 +2,28 @@ name: CI
 
 on:
   push:
-    branches: [main, dev]
-
+    branches: [main]
   pull_request:
-    branches: [main, dev]
+    branches: [main]
 
 jobs:
-  codechecks:
+  Check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'pnpm'
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: pnpm install
+        run: bun install
+
+      - name: Run typecheck
+        run: bun typecheck
 
       - name: Run codecheck
-        run: pnpm biome ci
+        run: bun biome ci
 
-      - name: Typecheck code
-        run: pnpm run typecheck
-
-      - name: Build code
-        run: pnpm run build
-# TODO: enable test in CI once ready
-#      - name: Run unit tests
-#        run: pnpm run test:unit:all
+      - name: Build SDK
+        run: bun sdk:build

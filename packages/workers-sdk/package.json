@@ -6,10 +6,11 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
+    "typecheck": "tsc",
     "build": "unbuild",
     "prepack": "unbuild",
-    "changelogen": "npx changelogen@latest --bump",
-    "release": "pnpm build && npx changelogen@latest --release --push && npm publish --access public"
+    "changelogen": "bunx changelogen@latest --bump",
+    "release": "bun run build && bunx changelogen@latest --release --push && npm publish --access public"
   },
   "exports": {
     ".": {
