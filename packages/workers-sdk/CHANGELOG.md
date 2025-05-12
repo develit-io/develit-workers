@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v4.0.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.0.0...v4.0.1)
+
+### 🏡 Chore
+
+- Switch to bun ([#41](https://github.com/develit-io/develit-workers/pull/41))
+- Fix bun lock ([#42](https://github.com/develit-io/develit-workers/pull/42))
+
+### ❤️ Contributors
+
+- FF <filip.f@develit.io>
+
 ## v4.0.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v3.5.0...v4.0.0)
