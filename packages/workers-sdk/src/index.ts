@@ -8,6 +8,7 @@ export type {
   InternalResponsePhrase,
   InternalResponseStatus,
   IRPCResponse,
+  GatewayResponse,
 } from './types'
 
 export {
