@@ -9,16 +9,22 @@ export type InternalErrorResponseStatus = Exclude<
   200 | 201 | 202 | 203 | 204 | 205 | 206 | 207
 >
 
-export type InternalError = {
+export interface InternalError {
   status: InternalErrorResponseStatus
   code: string
   message: string
 }
 
-export type IRPCResponse<T> = {
+export interface IRPCResponse<T> {
   status: InternalResponseStatus
   message: string
   data: T | null | undefined
   error: boolean
   phrase?: InternalResponsePhrase
+}
+
+export interface GatewayResponse<T> {
+  status?: number
+  message: string
+  data?: T
 }
