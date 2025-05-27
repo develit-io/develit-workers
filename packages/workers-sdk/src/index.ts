@@ -12,6 +12,7 @@ export type {
 } from './types'
 
 export {
+  handleActionResponse,
   calculateExponentialBackoff,
   createInternalError,
   drizzleConfig,
