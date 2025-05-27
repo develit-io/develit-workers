@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v4.3.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.2.0...v4.3.0)
+
+### 🚀 Enhancements
+
+- Handleactionresponse utility ([#51](https://github.com/develit-io/develit-workers/pull/51))
+
+### ❤️ Contributors
+
+- FF <filip.f@develit.io>
+
 ## v4.2.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.0.0...v4.2.0)
