@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v4.5.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.5.0...v4.5.1)
+
+### 💅 Refactors
+
+- **sdk:** Update mixin option names ([8ebac13](https://github.com/develit-io/develit-workers/commit/8ebac13))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v4.5.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.4.0...v4.5.0)
