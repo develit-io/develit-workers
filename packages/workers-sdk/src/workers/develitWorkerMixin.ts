@@ -5,7 +5,7 @@ import type z from 'zod'
 import { RPCResponse, createInternalError } from '../utils'
 
 // biome-ignore lint/suspicious/noExplicitAny: required for TS mixin pattern
-export type Constructor<T = {}> = new (...args: any[]) => T
+export type Constructor<T = {}> = abstract new (...args: any[]) => T
 
 export interface DevelitWorkerMethods {
   name: string
@@ -29,7 +29,7 @@ export interface DevelitWorkerMethods {
 export function develitWorker<TWorker extends Constructor>(
   Worker: TWorker,
 ): TWorker & Constructor<DevelitWorkerMethods> {
-  return class extends Worker {
+  abstract class DevelitWorker extends Worker {
     public name: string = 'not-set'
     public action: string = 'not-set'
 
@@ -112,4 +112,6 @@ export function develitWorker<TWorker extends Constructor>(
       )
     }
   }
+
+  return DevelitWorker
 }
