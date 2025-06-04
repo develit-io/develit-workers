@@ -28,7 +28,7 @@ export interface DevelitWorkerMethods {
 
 export function develitWorker<TWorker extends Constructor>(
   Worker: TWorker,
-): Constructor<DevelitWorkerMethods> {
+): TWorker & Constructor<DevelitWorkerMethods> {
   return class extends Worker {
     public name: string = 'not-set'
     public action: string = 'not-set'
