@@ -22,10 +22,10 @@ export interface DevelitWorkerMethods {
   }): z.infer<T>
 }
 
-export function develitWorkerMixin<TBase extends Constructor>(
-  Base: TBase,
+export function develitWorkerMixin<TWorker extends Constructor>(
+  Worker: TWorker,
 ): Constructor<DevelitWorkerMethods> {
-  return class extends Base {
+  return class extends Worker {
     protected name: string = 'not-set'
     protected action: string = 'not-set'
 
