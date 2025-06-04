@@ -1,6 +1,30 @@
 # Changelog
 
 
+## v4.4.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.0.0...v4.4.0)
+
+### 🚀 Enhancements
+
+- Add gatewayresponse type ([#49](https://github.com/develit-io/develit-workers/pull/49))
+- Handleactionresponse utility ([#51](https://github.com/develit-io/develit-workers/pull/51))
+- Add develitWorker mixin ([098d45c](https://github.com/develit-io/develit-workers/commit/098d45c))
+
+### 🏡 Chore
+
+- Switch to bun ([#41](https://github.com/develit-io/develit-workers/pull/41))
+- Fix bun lock ([#42](https://github.com/develit-io/develit-workers/pull/42))
+- **release:** V4.0.1 ([#43](https://github.com/develit-io/develit-workers/pull/43))
+- **release:** V4.2.0 ([da4f30f](https://github.com/develit-io/develit-workers/commit/da4f30f))
+- **release:** V4.3.0 ([e12bc9a](https://github.com/develit-io/develit-workers/commit/e12bc9a))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+- Ffdevelit <filip.f@develit.io>
+- FF <filip.f@develit.io>
+
 ## v4.3.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.2.0...v4.3.0)
