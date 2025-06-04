@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v4.6.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.5.1...v4.6.0)
+
+### 🚀 Enhancements
+
+- **sdk:** Remove DevelitWorkerEntrypint & cloudflare runtime dependency ([8a9a263](https://github.com/develit-io/develit-workers/commit/8a9a263))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v4.5.1
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.5.0...v4.5.1)
