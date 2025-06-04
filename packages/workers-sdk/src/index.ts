@@ -31,4 +31,4 @@ export {
   service,
 } from './decorators'
 
-export { DevelitWorkerEntrypoint, develitWorkerMixin } from './workers'
+export { develitWorker } from './workers'

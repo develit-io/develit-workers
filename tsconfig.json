@@ -5,7 +5,7 @@
     "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "types": ["node", "@cloudflare/workers-types"],
+    "types": ["node"],
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": false,

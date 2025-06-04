@@ -1,5 +1,6 @@
-import { calculateExponentialBackoff } from '../..//utils'
-import type { DevelitWorkerEntrypoint } from '../../workers'
+import { Message, MessageBatch } from '@cloudflare/workers-types'
+import { calculateExponentialBackoff } from '../../utils'
+import type { DevelitWorkerMethods } from '../../workers'
 
 interface WithRetryCounterOptions {
   baseDelay: number
@@ -23,7 +24,7 @@ export function cloudflareQueue<
     const originalMethod = descriptor.value!
 
     descriptor.value = async function (
-      this: DevelitWorkerEntrypoint<unknown>,
+      this: DevelitWorkerMethods,
       ...args: TArgs
     ): Promise<TResult> {
       const batch = args[0] as MessageBatch

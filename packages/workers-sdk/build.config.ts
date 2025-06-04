@@ -7,7 +7,6 @@ export default defineBuildConfig({
   rollup: {
     emitCJS: true,
   },
-  externals: ['cloudflare:workers'],
   // externals: [
   //   'drizzle-kit',
   //   'drizzle-orm',

@@ -1,4 +1,5 @@
 // develitEntrypointMixin.ts
+import { Queue } from '@cloudflare/workers-types'
 import superjson from 'superjson'
 import type z from 'zod'
 import { RPCResponse, createInternalError } from '../utils'
@@ -7,6 +8,9 @@ import { RPCResponse, createInternalError } from '../utils'
 export type Constructor<T = {}> = new (...args: any[]) => T
 
 export interface DevelitWorkerMethods {
+  name: string
+  action: string
+
   fetch(): Promise<Response>
   log(data: object, identifier?: string): void
   logQueuePush(data: object): void
@@ -22,12 +26,12 @@ export interface DevelitWorkerMethods {
   }): z.infer<T>
 }
 
-export function develitWorkerMixin<TWorker extends Constructor>(
+export function develitWorker<TWorker extends Constructor>(
   Worker: TWorker,
 ): Constructor<DevelitWorkerMethods> {
   return class extends Worker {
-    protected name: string = 'not-set'
-    protected action: string = 'not-set'
+    public name: string = 'not-set'
+    public action: string = 'not-set'
 
     async fetch() {
       return new Response('Service is up and running!')
