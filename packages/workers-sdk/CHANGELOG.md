@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v4.5.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.4.0...v4.5.0)
+
+### 🚀 Enhancements
+
+- **sdk:** Export develitWorker mixin ([18a50ea](https://github.com/develit-io/develit-workers/commit/18a50ea))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v4.4.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.0.0...v4.4.0)
