@@ -32,3 +32,4 @@ export {
 } from './decorators'
 
 export { develitWorker } from './workers'
+export type { DevelitWorkerMethods } from './workers'
