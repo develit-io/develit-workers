@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v4.6.3
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.6.2...v4.6.3)
+
+### 🩹 Fixes
+
+- **sdk:** Update worker mixin to accept abstract class ([1b24ea0](https://github.com/develit-io/develit-workers/commit/1b24ea0))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v4.6.2
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.6.1...v4.6.2)
