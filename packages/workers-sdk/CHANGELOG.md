@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v4.6.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.6.0...v4.6.1)
+
+### 🩹 Fixes
+
+- **sdk:** Return correct mixin type ([4718dc3](https://github.com/develit-io/develit-workers/commit/4718dc3))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](https://github.com/kleinpetr))
+
 ## v4.6.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.5.1...v4.6.0)
