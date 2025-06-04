@@ -1,6 +1,7 @@
 export { base } from './database'
 
 export type {
+  GatewayResponse,
   IncludeRelation,
   InferResultType,
   InternalError,
@@ -8,16 +9,15 @@ export type {
   InternalResponsePhrase,
   InternalResponseStatus,
   IRPCResponse,
-  GatewayResponse,
 } from './types'
 
 export {
-  handleActionResponse,
   calculateExponentialBackoff,
   createInternalError,
   drizzleConfig,
   first,
   firstOrError,
+  handleActionResponse,
   isInternalError,
   RPCResponse,
   useResult,
@@ -31,4 +31,4 @@ export {
   service,
 } from './decorators'
 
-export { DevelitWorkerEntrypoint } from './workers'
+export { DevelitWorkerEntrypoint, develitWorkerMixin } from './workers'
