@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v5.0.1
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.0...v5.0.1)
+
+### 🩹 Fixes
+
+- HandleActionInput allows object as input param ([c4d943c](https://github.com/develit-io/develit-workers/commit/c4d943c))
+
+### ❤️ Contributors
+
+- Ffdevelit <filip.f@develit.io>
+
 ## v5.0.0
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.6.4...v5.0.0)
