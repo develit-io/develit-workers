@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v5.0.4
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.3...v5.0.4)
+
+### 💅 Refactors
+
+- Return z.infer instead of z.output in zod methods ([57541d1](https://github.com/develit-io/develit-workers/commit/57541d1))
+
+### ❤️ Contributors
+
+- Ffdevelit <filip.f@develit.io>
+
 ## v5.0.3
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.2...v5.0.3)
