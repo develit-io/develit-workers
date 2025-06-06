@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v5.0.5
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.4...v5.0.5)
+
+### 🩹 Fixes
+
+- Zod is not marked as a peer dependency ([f5f9617](https://github.com/develit-io/develit-workers/commit/f5f9617))
+
+### ❤️ Contributors
+
+- Ffdevelit <filip.f@develit.io>
+
 ## v5.0.4
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.3...v5.0.4)
