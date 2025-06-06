@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v5.0.2
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.1...v5.0.2)
+
+### 🩹 Fixes
+
+- HandleInput does not show types ([e2c52f7](https://github.com/develit-io/develit-workers/commit/e2c52f7))
+
+### ❤️ Contributors
+
+- Ffdevelit <filip.f@develit.io>
+
 ## v5.0.1
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.0...v5.0.1)
