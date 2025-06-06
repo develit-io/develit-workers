@@ -30,7 +30,7 @@
     "h3": "^1.15.3",
     "http-status-codes": "2.3.0",
     "superjson": "^2.2.2",
-    "zod": "^3.24.2"
+    "zod": "^3.25.52"
   },
   "devDependencies": {
     "typescript": "^5.8.3",
