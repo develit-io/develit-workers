@@ -39,8 +39,8 @@ export function develitWorker<TWorker extends Constructor>(
     handleActionInput<T extends z.Schema>({
       input,
       schema,
-    }: { input: z.infer<T> & object; schema: T }) {
-      this.logInput(input)
+    }: { input: z.infer<T>; schema: T }) {
+      this.logInput({ input })
 
       const result = schema.safeParse(input)
 
