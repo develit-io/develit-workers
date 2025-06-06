@@ -39,30 +39,32 @@ export function develitWorker<TWorker extends Constructor>(
     handleInput<T extends z.$ZodType>({
       input,
       schema,
-    }: { input: z.infer<T>; schema: T }) {
+    }: { input: z.infer<T>; schema: T }): z.output<T> {
       this.logInput({ input })
 
-      const result = z.safeParse(schema, input)
+      const parseResult = z.safeParse(schema, input)
 
-      if (!result.success) {
-        const validationError = {
+      if (!parseResult.success) {
+        const parseError = {
           status: 400,
-          code: 'INVALID_INPUT',
-          message: result.error.message,
+          code: 'INVALID_ACTION_INPUT',
+          message: z.prettifyError(parseResult.error),
         }
 
-        this.logError(validationError)
-        throw RPCResponse.validationError(validationError)
+        this.logError(parseError)
+
+        throw RPCResponse.validationError(parseError)
       }
 
-      if (!result.data) {
+      if (!parseResult.data) {
         throw createInternalError({
-          statusCode: 418,
-          message: `Couldn't start processing the request.`,
+          statusCode: 400,
+          code: 'DEFORMED_ACTION_INPUT',
+          message: 'The provided input could not be processed.',
         })
       }
 
-      return result.data as z.infer<T>
+      return parseResult.data
     }
 
     log(data: object, identifier?: string) {
