@@ -1,7 +1,6 @@
-// develitEntrypointMixin.ts
 import { Queue } from '@cloudflare/workers-types'
 import superjson from 'superjson'
-import type z from 'zod'
+import type z from 'zod/v4'
 import { RPCResponse, createInternalError } from '../utils'
 
 // biome-ignore lint/suspicious/noExplicitAny: required for TS mixin pattern
@@ -40,7 +39,7 @@ export function develitWorker<TWorker extends Constructor>(
     handleActionInput<T extends z.Schema>({
       input,
       schema,
-    }: { input: z.infer<T>; schema: T }) {
+    }: { input: z.infer<T> & object; schema: T }) {
       this.logInput(input)
 
       const result = schema.safeParse(input)
