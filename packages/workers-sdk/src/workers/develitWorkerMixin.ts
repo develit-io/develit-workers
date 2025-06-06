@@ -1,6 +1,6 @@
 import { Queue } from '@cloudflare/workers-types'
 import superjson from 'superjson'
-import type z from 'zod/v4'
+import z from 'zod/v4/core'
 import { RPCResponse, createInternalError } from '../utils'
 
 // biome-ignore lint/suspicious/noExplicitAny: required for TS mixin pattern
@@ -19,7 +19,7 @@ export interface DevelitWorkerMethods {
   logOutput(data: object): void
   logError(error: object): void
   pushToQueue<T>(queue: Queue, message: T | T[]): Promise<void>
-  handleActionInput<T extends z.Schema>(args: {
+  handleInput<T extends z.$ZodType>(args: {
     input: z.infer<T>
     schema: T
   }): z.infer<T>
@@ -36,13 +36,13 @@ export function develitWorker<TWorker extends Constructor>(
       return new Response('Service is up and running!')
     }
 
-    handleActionInput<T extends z.Schema>({
+    handleInput<T extends z.$ZodType>({
       input,
       schema,
     }: { input: z.infer<T>; schema: T }) {
       this.logInput({ input })
 
-      const result = schema.safeParse(input)
+      const result = z.safeParse(schema, input)
 
       if (!result.success) {
         const validationError = {
