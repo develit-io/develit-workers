@@ -39,7 +39,7 @@ export function develitWorker<TWorker extends Constructor>(
     handleInput<T extends z.$ZodType>({
       input,
       schema,
-    }: { input: z.infer<T>; schema: T }): z.output<T> {
+    }: { input: z.infer<T>; schema: T }): z.infer<T> {
       this.logInput({ input })
 
       const parseResult = z.safeParse(schema, input)
