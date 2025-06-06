@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v5.0.0
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.6.4...v5.0.0)
+
+### 🏡 Chore
+
+- ⚠️  Update to zod 4 ([4ef8eba](https://github.com/develit-io/develit-workers/commit/4ef8eba))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Update to zod 4 ([4ef8eba](https://github.com/develit-io/develit-workers/commit/4ef8eba))
+
+### ❤️ Contributors
+
+- Ffdevelit <filip.f@develit.io>
+
 ## v4.6.4
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.6.3...v4.6.4)
