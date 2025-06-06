@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v5.0.6
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.5...v5.0.6)
+
+### 🏡 Chore
+
+- Import all instead of default for zod 4 ([f7897d1](https://github.com/develit-io/develit-workers/commit/f7897d1))
+
+### ❤️ Contributors
+
+- Ffdevelit <filip.f@develit.io>
+
 ## v5.0.5
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.4...v5.0.5)
