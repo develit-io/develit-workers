@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v4.6.4
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v4.6.3...v4.6.4)
+
+### 🏡 Chore
+
+- (deps): update zod requirement from ^3.24.4 to ^3.25.52 ([#58](https://github.com/develit-io/develit-workers/pull/58))
+- Fix bun lock ([a08d5b4](https://github.com/develit-io/develit-workers/commit/a08d5b4))
+
+### ❤️ Contributors
+
+- Ffdevelit <filip.f@develit.io>
+
 ## v4.6.3
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v4.6.2...v4.6.3)
