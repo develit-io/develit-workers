@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v5.0.3
+
+[compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.2...v5.0.3)
+
+### 🩹 Fixes
+
+- HandleInput returns any ([ff1eacb](https://github.com/develit-io/develit-workers/commit/ff1eacb))
+
+### ❤️ Contributors
+
+- Ffdevelit <filip.f@develit.io>
+
 ## v5.0.2
 
 [compare changes](https://github.com/develit-io/develit-workers/compare/v5.0.1...v5.0.2)
