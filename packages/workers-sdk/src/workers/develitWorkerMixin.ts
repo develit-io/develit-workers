@@ -1,6 +1,6 @@
 import { Queue } from '@cloudflare/workers-types'
 import superjson from 'superjson'
-import z from 'zod/v4/core'
+import * as z from 'zod/v4/core'
 import { RPCResponse, createInternalError } from '../utils'
 
 // biome-ignore lint/suspicious/noExplicitAny: required for TS mixin pattern
